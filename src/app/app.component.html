@@ -1,5 +1,10 @@
-<div class="container">
-<h1 class="main-page-title">Mars Colony</h1>
-<div class="circle-wrapper"><div class="tap-large-circle"><div class="tap-medium-circle"><div class="tap-small-circle"></div></div></div></div>
-<h2 class="main-page-description">Tap circle to enter</h2>
-</div>
+<nav>
+	<ul>
+		<li><a [routerLink]="['/']">Home</a></li>
+		<li><a [routerLink]="['/arrival']">Arrival</a></li>
+		<li><a [routerLink]="['/encounters']">Encounters</a></li>
+		<li><a [routerLink]="['/report']">Report</a></li>
+	</ul>
+</nav>
+
+<router-outlet></router-outlet>

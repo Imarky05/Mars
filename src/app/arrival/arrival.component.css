@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+}
+
+/*nav bar*/
+	.nav-bar {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 20px;
+	}
+
+	.container {
+		height: 100vh;		
+		background-size: cover;
+		background-position: center;
+		/* -webkit-animation: scale_up 5s ease infinite; */
+		background: linear-gradient(40deg, rgb(100,0,0), rgb(200,0,0));
+	}
+
+	.mars {
+		transition: 1s;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.mars-planet {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		border: rgba(250,0,0,0.5); solid 4px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		background-image: url(../images/mars.png);
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		overflow: hidden;
+	}
+	.mars-surface {
+		position: absolute;
+		height: 100%;
+		-webkit-animation: left-right-surface 10s ease infinite alternate; 
+	}
+	.mars-clouds {
+		position: absolute;
+		height: 100%;
+		-webkit-animation: left-right-clouds 10s ease infinite alternate; 
+	}
+
+	.mars:hover {
+		transition: 1s;
+		transform: scale(1.2);
+	}
+
+	@-webkit-keyframes left-right-surface {
+	  0%   { left: 0; }
+	  100% { left: -20px; }
+	}
+
+	@-webkit-keyframes left-right-clouds {
+	  0%   { left: 0; }
+	  100% { left: -10px; }
+	}
+
+	.main-page-title {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+
+	.main-page-description {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		font-weight: normal;
+	}
+
+/*arrival*/
+	.arrival-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.arrival-container form{
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	fieldset {
+		font-family: 'Oswald', sans-serif;
+		padding: 0;
+		margin: 0;
+		border: none;
+		width: 90%;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	.arrival-form input {
+		font-family: 'Oswald', sans-serif;
+		border: none;
+		border-bottom: 1px white dashed;
+		padding: 10px 0;
+		text-indent: 10px;
+		margin: 30px 0;
+		width: 100%;
+		font-size: 2rem;
+		color: white;
+
+		background: none;	}
+
+	.arrival-form select {
+		font-family: 'Oswald', sans-serif;
+		border: none;
+		border-bottom: 1px white dashed;
+		padding: 5px;
+		margin: 30px 0;
+		width: 100%;
+		font-size: 2rem;
+		color: white;
+		background: none;
+	}
+
+	.arrival-form select option {
+		background: black;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.arrival-button {
+		width: 100%;
+		padding: 30px;
+		border: rgba(200,0,0,0.5) 2px solid;
+		font-size: 2rem;
+		color: white;
+		background: none;
+	}

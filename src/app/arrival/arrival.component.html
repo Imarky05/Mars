@@ -1,0 +1,37 @@
+<div class="container">
+
+<div class="nav-bar">
+	<a [routerLink]="['/']">
+	<div class="mars">
+		<div class="mars-planet">
+			<img src="../images/dots.png" alt="" class="mars-surface">
+		</div>
+		<img src="../images/dust-clouds.png" alt="" class="mars-clouds">
+	</div>
+	</a>
+
+	<h3 class="main-page-title">Mars Colony</h3>
+
+</div>
+
+<div class="arrival-container">
+<form action="">
+	<fieldset class="arrival-form">
+		<input type="text" name="Name" placeholder="Name">
+		<input type="number" name="Age" placeholder="Age">
+		<select name="Occupation" id="occupation">
+			<option value="" disabled="" selected="">Select Your Occupation</option>
+			<option value="dust-farmer">Dust Farmer</option>
+			<option value="alien-hunter">Alien Hunter</option>
+			<option value="battery-technician">Battery Technician</option>
+			<option value="yoga-teacher">Yoga Teacher</option>
+			<option value="front-end-developer">Front-End Developer</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		<button class="arrival-button">Welcome To The Colony</button>
+	</fieldset>
+</form>
+</div>
+
+</div>

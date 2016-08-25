@@ -1,23 +1,23 @@
-interface IAlien {
+export interface IAlien {
 	type: string;
 	description: string;
 	submitted_by: string;
 }
 
-interface IColonist {
+export interface IColonist {
 	name: string;
-	job: IJob;
+	job: IOccupation;
 	age: number;
 }
 
-interface IEncounter {
+export interface IEncounter {
 	date: number;
 	atype: string;
 	action: string;
 	colonist_id: number;
 }
 
-interface IJob {
+export interface IOccupation {
 	name: string;
 	description: string;
 }
