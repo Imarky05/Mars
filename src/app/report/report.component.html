@@ -1,3 +1,32 @@
-<p>
-  report works!
-</p>
+<div class="container">
+
+<div class="nav-bar">
+	<a [routerLink]="['/']">
+		<div class="nav-mars">
+			<div class="mars-planet">
+				<img src="../images/dots.png" alt="" class="mars-surface">
+			</div>
+			<img src="../images/dust-clouds.png" alt="" class="mars-clouds">
+		</div>
+	</a>
+
+	<h3 class="main-page-title">Mars Colony</h3>
+
+</div>
+
+<div class="report-container">
+<form #reportForm="ngForm" (ngSubmit)="onSubmit()" name="reportForm">
+	<fieldset class="report-form">
+		<select name="atype" id="alien" [(ngModel)]="encounter.atype" required>
+			<option value="(none)" disabled="" selected="">Which Alien did you see?</option>
+			<option *ngFor="let a of aliens" [value]="a.type">{{a.type}}</option>
+		</select>
+		<textarea name="action" id="" cols="30" rows="10" class="encounter-description" placeholder="What did it do and or what did you do?" [(ngModel)]="encounter.action"></textarea>
+	</fieldset>
+	<fieldset>
+		<button class="report-button" type="submit" [disabled]="noAlien || !reportForm.form.valid">Report it!</button>
+	</fieldset>
+</form>
+</div>
+
+</div>

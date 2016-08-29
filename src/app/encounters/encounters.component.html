@@ -2,7 +2,7 @@
 
 <div class="nav-bar">
 	<a [routerLink]="['/']">
-	<div class="mars">
+	<div class="nav-mars">
 		<div class="mars-planet">
 			<img src="../images/dots.png" alt="" class="mars-surface">
 		</div>
@@ -14,11 +14,23 @@
 
 </div>
 
+
+
 <div class="encounter-container">
+<div class="encounter-log">
+	<h2 class="encounter-log-title">Colony Counter Log</h2>
+	<ul class ="encounter-list">
+		<li *ngFor="let e of (encounters | sortByDate) ">
+			<h3>{{e.atype}}</h3>
+			<p>[{{e.date}}]</p>
+			<p>{{e.action}}</p>
+		</li>
+	</ul>
+</div>
 <form action="">
-	<fieldset>
-		<button class="encounter-button">Report an Encounter</button>
-	</fieldset>
+	<div class="report-link">
+		<a [routerLink]="['/report']"><button class="report-link-button">Report an Encounter</button></a>
+	</div>
 </form>
 </div>
 

@@ -4,17 +4,29 @@ export interface IAlien {
 	submitted_by: string;
 }
 
-export interface IColonist {
-	name: string;
-	job: IOccupation;
-	age: number;
+export class Colonist {
+	constructor(
+		public name: string,
+		public age: string,
+		public job_id: string
+	){
+
+	}
 }
 
-export interface IEncounter {
-	date: number;
-	atype: string;
-	action: string;
-	colonist_id: number;
+export class Encounter {
+	constructor(
+		public date: string,
+		public atype: string,
+		public action: string,
+		public colonist_id: string
+	){
+		this.date = this.formattedDate;
+	}
+	get formattedDate(): string{
+	    let date = new Date();
+	    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+	}
 }
 
 export interface IOccupation {

@@ -5,6 +5,7 @@ import { AppComponent, environment } from './app/';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { routing, appRoutingProviders } from './app/app.routing';
 
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ import { ReportComponent } from './app/report';
 	imports: [
 		BrowserModule,
 		routing,
+		FormsModule
 	],
 	providers: [
 		HTTP_PROVIDERS,

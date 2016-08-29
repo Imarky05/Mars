@@ -6,14 +6,14 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class OccupationService {
-	OccupationUrl = 'https://red-wdp-api.hrekuapp.com/api/mars/Occupation';
+	OccupationUrl = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
 
 	constructor(private http: Http){}
 
 	getOccupation(): Promise<IOccupation[]>{
 		return this.http.get(this.OccupationUrl)
 						.toPromise()
-						.then(response => response.json().Occupation)
+						.then(response => response.json().jobs)
 						.catch(this.handleError);
 	}
 

@@ -2,7 +2,7 @@
 
 <div class="nav-bar">
 	<a [routerLink]="['/']">
-	<div class="mars">
+	<div class="nav-mars">
 		<div class="mars-planet">
 			<img src="../images/dots.png" alt="" class="mars-surface">
 		</div>
@@ -15,21 +15,18 @@
 </div>
 
 <div class="arrival-container">
-<form action="">
+
+<form #arrivalForm="ngForm" name="arrivalForm" (ngSubmit)="onSubmit()">
 	<fieldset class="arrival-form">
-		<input type="text" name="Name" placeholder="Name">
-		<input type="number" name="Age" placeholder="Age">
-		<select name="Occupation" id="occupation">
-			<option value="" disabled="" selected="">Select Your Occupation</option>
-			<option value="dust-farmer">Dust Farmer</option>
-			<option value="alien-hunter">Alien Hunter</option>
-			<option value="battery-technician">Battery Technician</option>
-			<option value="yoga-teacher">Yoga Teacher</option>
-			<option value="front-end-developer">Front-End Developer</option>
+		<input [(ngModel)]="colonist.name" type="text" name="name" placeholder="Name" required>
+		<input [(ngModel)]="colonist.age" type="number" name="age" placeholder="Age" required min="0">
+		<select [(ngModel)]="colonist.job_id" name="job_id" id="occupation" required>
+			<option value="(none)" disabled="" selected="">Select Your Occupation</option>
+			<option *ngFor="let o of occupations" [value]="o.id">{{o.name}}</option>
 		</select>
 	</fieldset>
 	<fieldset>
-		<button class="arrival-button">Welcome To The Colony</button>
+		<button type="submit" class="arrival-button" [disabled]="noOccupation || !arrivalForm.form.valid">Welcome To The Colony</button>
 	</fieldset>
 </form>
 </div>

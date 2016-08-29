@@ -1,0 +1,73 @@
+/*nav bar*/
+	.nav-bar {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 20px;
+		a {
+			.nav-mars {
+				transition: 1s;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				overflow: hidden;
+				.mars-planet {
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+					display: flex;
+					flex-flow: column nowrap;
+					justify-content: center;
+					align-items: center;
+					background-image: url(../images/mars.png);
+					background-size: cover;
+					background-position: center;
+					position: relative;
+					overflow: hidden;
+					.mars-surface {
+						position: absolute;
+						height: 100%;
+						-webkit-animation: left-right-surface-nav 10s ease infinite alternate; 
+					}
+				}
+				.mars-clouds {
+					position: absolute;
+					height: 100%;
+					-webkit-animation: left-right-clouds-nav 10s ease infinite alternate; 
+				}
+			}
+		}
+	}
+
+	.mars:hover {
+		transition: 1s;
+		transform: scale(1.2);
+	}
+
+	@-webkit-keyframes left-right-surface-nav {
+	  0%   { left: 0; }
+	  100% { left: -20px; }
+	}
+
+	@-webkit-keyframes left-right-clouds-nav {
+	  0%   { left: 0; }
+	  100% { left: -10px; }
+	}
+
+	.main-page-title {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+
+	.main-page-description {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		font-weight: normal;
+	}

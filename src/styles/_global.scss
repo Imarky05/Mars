@@ -1,0 +1,11 @@
+body {
+	margin: 0;
+}
+
+.container {
+	height: 100vh;		
+	background-size: cover;
+	background-position: center;
+	/* -webkit-animation: scale_up 5s ease infinite; */
+	background: linear-gradient(40deg, rgb(100,0,0), rgb(200,0,0));
+}
