@@ -20,6 +20,11 @@
 
 <div class="arrival-container">
 
+<div class="arrival-title">
+	<h2>Mars Customs</h2>
+	<p>Please fill in all fields.</p>
+</div>
+
 <form #arrivalForm="ngForm" name="arrivalForm" (ngSubmit)="onSubmit()">
 	<fieldset class="arrival-form">
 		<input [(ngModel)]="colonist.name" type="text" name="name" placeholder="Name" required>

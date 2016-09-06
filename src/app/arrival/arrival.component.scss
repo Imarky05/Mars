@@ -3,14 +3,31 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-flow: row wrap;
+		form{
+			width: 100%;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 
-	.arrival-container form{
-		width: 100%;
+	.arrival-title {
+		font-family: 'Oswald', sans-serif;
+		color: white;
 		display: flex;
-		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
+		flex-flow: column wrap;
+		h2 {
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			padding-bottom: 20px;
+		}
+		p {
+			font-size: 1rem;
+		}
 	}
 
 	fieldset {
@@ -67,10 +84,13 @@
 		background: rgb(100,0,0);
 		&:disabled{
 			cursor: not-allowed;
+			opacity: 0.3;
 		}
-		&:hover {
-			transition: 1s;
-			background: rgb(50,0,0);
+		&:enabled{
+			&:hover {
+				transition: 1s;
+				background: rgb(50,0,0);
+			}
 		}
 	}
 

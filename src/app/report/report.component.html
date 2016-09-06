@@ -19,6 +19,12 @@
 </div>
 
 <div class="report-container">
+
+<div class="report-title">
+	<h2>Alien Encounter Report</h2>
+	<p>Please fill in all fields.</p>
+</div>
+
 <form #reportForm="ngForm" (ngSubmit)="onSubmit()" name="reportForm">
 	<fieldset class="report-form">
 		<select name="atype" id="alien" [(ngModel)]="encounter.atype" required>

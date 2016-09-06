@@ -3,6 +3,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-flow: row wrap;
 	}
 
 	.report-container form{
@@ -11,6 +12,23 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.report-title {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+		h2 {
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			padding-bottom: 20px;
+		}
+		p {
+			font-size: 1rem;
+		}
 	}
 
 	fieldset {
@@ -56,22 +74,26 @@
 
 	.report-button {
 		cursor: pointer;
+		transition: 1s;
 		font-family: 'Oswald', sans-serif;
 		width: 100%;
 		padding: 30px;
 		border: rgba(200,0,0,0.5) 2px solid;
+		border-radius: 20px;
 		font-size: 2rem;
 		color: white;
 		background: rgb(100,0,0);
-		transition: 1s;
-		border-radius: 20px;
+		
 		&:disabled{
 			cursor: not-allowed;
+			opacity: 0.3;
 		}
-		&:hover {
-			transition: 1s;
-			background: rgb(50,0,0);
-		}	
+		&:enabled{
+			&:hover {
+				transition: 1s;
+				background: rgb(50,0,0);
+			}
+		}
 	}
 
 	.encounter-description {

@@ -35,3 +35,12 @@ body {
 .loading_img {
 	opacity: 0.5;
 }
+
+input, textarea, button, select {
+	&:focus {
+		outline: 3px outset rgba(0,0,255,0.5);
+	}
+}
+
+//mixins
+

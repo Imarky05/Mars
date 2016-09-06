@@ -52,11 +52,6 @@
 		100% { opacity: 1; }
 	}
 
-	.mars:hover {
-		transition: 1s;
-		transform: scale(1.2);
-	}
-
 	@-webkit-keyframes left-right-surface-nav {
 	  0%   { left: 0; }
 	  100% { left: -20px; }
