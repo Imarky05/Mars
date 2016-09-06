@@ -1,8 +1,8 @@
 <div class="container">
 <h1 class="main-page-title">Mars Colony</h1>
 
-<a [routerLink]="['/arrival']">
-<div class="mars">
+<a [routerLink]="['/arrival']" (click)="togglestate()">
+<div class="mars" @shrinktrigger="state">
 	<div class="mars-planet">
 		<img src="../images/dots.png" alt="" class="mars-surface">
 	</div>

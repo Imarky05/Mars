@@ -70,3 +70,32 @@
 			background: rgb(50,0,0);
 		}
 	}
+
+	input.ng-touched.ng-invalid, select.ng-touched.ng-pristine {
+		animation: invalid-indicator 1.5s infinite;
+	}
+
+	@-webkit-keyframes invalid-indicator {
+		0%   { 
+			background: rgba(0,0,255,0.5);
+		}
+		100% { 
+			background: rgba(0,0,255,0);
+		}
+	}
+
+	// code below for loading screen
+
+	.loading {
+		background: rgba(0,0,0,0.5);
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.loading_img {
+		opacity: 0.5;
+	}

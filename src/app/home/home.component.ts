@@ -1,16 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+	Component, 
+	Input,
+	trigger,
+	state,
+	style,
+	transition,
+	animate 
+} from '@angular/core';
+
 
 @Component({
   moduleId: module.id,
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styleUrls: ['home.component.css']
+  styleUrls: ['home.component.css'],
+  animations: [
+  	trigger('shrinktrigger', [
+  		state('firstpos', style({transform: 'scale(1)'})),
+  		state('secondpos', style({transform: 'scale(0)'})),
+  		transition('firstpos => secondpos', [
+  			animate('1s ease-in')
+  		]),
+  		transition('secondpos => firstpos', [
+  			animate('1s ease-in')
+  		])
+  	])
+  ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor() { }
 
-  ngOnInit() {
+  state: string = 'firstpos';
+
+  togglestate() {
+  	this.state = (this.state === 'firstpos' ? 'secondpos' : 'firstpos');
   }
 
 }

@@ -1,5 +1,9 @@
 <div class="container">
 
+<!-- <div class="loading">
+	<img class="loading_img" src="../../images/loading.gif" alt="">
+</div> -->
+
 <div class="nav-bar">
 	<a [routerLink]="['/']">
 	<div class="nav-mars">
@@ -21,7 +25,7 @@
 		<input [(ngModel)]="colonist.name" type="text" name="name" placeholder="Name" required>
 		<input [(ngModel)]="colonist.age" type="number" name="age" placeholder="Age" required min="0">
 		<select [(ngModel)]="colonist.job_id" name="job_id" id="occupation" required>
-			<option value="(none)" disabled="" selected="">Select Your Occupation</option>
+			<option value="(none)" disabled selected>Select Your Occupation</option>
 			<option *ngFor="let o of occupations" [value]="o.id">{{o.name}}</option>
 		</select>
 	</fieldset>
