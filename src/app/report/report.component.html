@@ -1,5 +1,9 @@
 <div class="container">
 
+<!-- <div class="loading">
+	<img class="loading_img" src="../../images/loading.gif" alt="">
+</div> -->
+
 <div class="nav-bar">
 	<a [routerLink]="['/']">
 		<div class="nav-mars">
@@ -21,7 +25,7 @@
 			<option value="(none)" disabled="" selected="">Which Alien did you see?</option>
 			<option *ngFor="let a of aliens" [value]="a.type">{{a.type}}</option>
 		</select>
-		<textarea name="action" id="" cols="30" rows="10" class="encounter-description" placeholder="What did it do and or what did you do?" [(ngModel)]="encounter.action"></textarea>
+		<textarea name="action" id="" cols="30" rows="10" class="encounter-description" placeholder="What did it do and or what did you do?" [(ngModel)]="encounter.action" required></textarea>
 	</fieldset>
 	<fieldset>
 		<button class="report-button" type="submit" [disabled]="noAlien || !reportForm.form.valid">Report it!</button>
