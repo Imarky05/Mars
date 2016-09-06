@@ -65,6 +65,9 @@
 		background: rgb(100,0,0);
 		transition: 1s;
 		border-radius: 20px;
+		&:disabled{
+			cursor: not-allowed;
+		}
 		&:hover {
 			transition: 1s;
 			background: rgb(50,0,0);
