@@ -24,7 +24,7 @@
 <div class="encounter-log">
 	<h2 class="encounter-log-title">Colony Counter Log</h2>
 	<ul class ="encounter-list">
-		<li *ngFor="let e of (encounters | sortByDate) ">
+		<li *ngFor="let e of encounters ">
 			<h3>{{e.atype}}</h3>
 			<p>[{{e.date}}]</p>
 			<p>{{e.action}}</p>

@@ -13,7 +13,7 @@ export class EncounterService {
 	getEncounter(): Promise<Encounter[]>{
 		return this.http.get(this.encounterUrl)
 						.toPromise()
-						.then(response => response.json().encounters)
+						.then(response => response.json().encounters.reverse())
 						.catch(this.handleError);
 	}
 

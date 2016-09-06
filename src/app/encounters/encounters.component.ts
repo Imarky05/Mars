@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Encounter } from '../shared/models';
-import { SortByDate } from '../shared/pipe/date-pipe';
 
 import { EncounterService } from '../shared/services/encounter-services';
 
@@ -9,8 +8,7 @@ import { EncounterService } from '../shared/services/encounter-services';
   moduleId: module.id,
   selector: 'app-encounters',
   templateUrl: 'encounters.component.html',
-  styleUrls: ['encounters.component.css'],
-  pipes: [ SortByDate ]
+  styleUrls: ['encounters.component.css']
 })
 export class EncountersComponent {
 
