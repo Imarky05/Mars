@@ -1,5 +1,9 @@
 <div class="container">
 
+<div class="loading" *ngIf="!encounters">
+	<img class="loading_img" src="../../images/loading.gif" alt="">
+</div>
+
 <div class="nav-bar">
 	<a [routerLink]="['/']">
 	<div class="nav-mars">

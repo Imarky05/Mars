@@ -82,3 +82,17 @@
 			background: rgb(50,0,0);
 		}
 	}
+
+	.loading {
+		background: rgba(0,0,0,0.5);
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.loading_img {
+		opacity: 0.5;
+	}

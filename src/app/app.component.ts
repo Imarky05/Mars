@@ -19,9 +19,5 @@ export class AppComponent {
 			  	colonistService: ColonistService, 
 			  	encounterService: EncounterService, 
 			  	occupationService: OccupationService){
-  	console.log(alienService);
-  	console.log(colonistService);
-  	console.log(encounterService);
-  	console.log(occupationService);
   }
 }
