@@ -1,3 +1,6 @@
+//variables
+$font-main: 'Oswald', sans-serif;
+
 body {
 	margin: 0;
 }
@@ -41,6 +44,3 @@ input, textarea, button, select {
 		outline: 3px outset rgba(0,0,255,0.5);
 	}
 }
-
-//mixins
-
