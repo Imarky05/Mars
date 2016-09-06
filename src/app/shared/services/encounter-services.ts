@@ -33,6 +33,4 @@ export class EncounterService {
 	               .then(response => response.json().encounter)
 	               .catch(this.handleError);
 	}
-
-
 }

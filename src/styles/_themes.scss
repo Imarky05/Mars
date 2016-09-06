@@ -8,3 +8,30 @@ body {
 	background-position: center;
 	background: linear-gradient(40deg, rgb(100,0,0), rgb(200,0,0));
 }
+
+// animations
+
+@-webkit-keyframes invalid-indicator {
+	0%   { 
+		background: rgba(0,0,255,0.5);
+	}
+	100% { 
+		background: rgba(0,0,255,0);
+	}
+}
+
+// code below for loading screen
+
+.loading {
+	background: rgba(0,0,0,0.5);
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loading_img {
+	opacity: 0.5;
+}

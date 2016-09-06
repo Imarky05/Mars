@@ -40,8 +40,16 @@
 					height: 100%;
 					-webkit-animation: left-right-clouds-nav 10s ease infinite alternate; 
 				}
+
+				animation: visibility-pulse 2s infinite;
 			}
 		}
+	}
+
+	@-webkit-keyframes visibility-pulse {
+		0% { opacity: 1; }
+		50% { opacity: 0; }
+		100% { opacity: 1; }
 	}
 
 	.mars:hover {
